@@ -8,6 +8,7 @@ import Link from 'next/link'
 const carouselImages = [
   "/images/services/cabros-and-pavers/Cabros-and-pavers-1.webp",
   "/images/services/concrete-poles/concrete-poles-1.webp",
+  "/NCA-CERT.webp",
   "/images/services/prestressed-beams-and-blocks/PRESTRESSED-BEAMS-AND-BLOCKS-1-a.webp",
   "/images/services/prestressed-beams-and-blocks/PRESTRESSED-BEAMS-AND-BLOCKS-1-c.webp",
   "/images/services/prestressed-beams-and-blocks/PRESTRESSED-BEAMS-AND-BLOCKS-1-d.webp",
@@ -31,7 +32,7 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-primary via-primary to-[#1B2342]">
       {/* Background */}
-     
+
 
       <div className="relative mx-auto max-w-7xl px-4 md:px-8 lg:px-12 py-12">
         <div className="grid items-center gap-16 lg:grid-cols-2">
@@ -39,7 +40,7 @@ export default function Hero() {
           <div>
 
             <h1 className="mt-6 text-5xl font-bold text-white">
-             Let's Work Together on Your Next <span className="text-accent font-black ">Construction </span>Project
+              Let's Work Together on Your Next <span className="text-accent font-black ">Construction </span>Project
             </h1>
 
             <p className="mt-6 max-w-xl leading-6 text-slate-200 ">
@@ -90,7 +91,7 @@ export default function Hero() {
               ))}
             </div>
 
-          
+
           </div>
 
           {/* Right Image */}
@@ -110,12 +111,11 @@ export default function Hero() {
                       width={650}
                       height={600}
                       priority={index === 0}
-                      className={`absolute left-0 top-0 h-auto w-full object-contain transition-opacity duration-1000 rounded-[32px]  ${
-                        index === currentImageIndex ? 'z-10 opacity-100' : 'z-0 opacity-0'
-                      }`}
+                      className={`absolute left-0 top-0 h-auto w-full object-contain transition-opacity duration-1000 rounded-[32px]  ${index === currentImageIndex ? 'z-10 opacity-100' : 'z-0 opacity-0'
+                        }`}
                     />
                   ))}
-                  
+
                   {/* Invisible placeholder to establish the container's natural size */}
                   <Image
                     src={carouselImages[0]}
@@ -132,11 +132,10 @@ export default function Hero() {
                       <button
                         key={index}
                         onClick={() => setCurrentImageIndex(index)}
-                        className={`h-2.5 rounded-full transition-all duration-300 ${
-                          index === currentImageIndex
-                            ? 'w-8 bg-accent'
-                            : 'w-2.5 bg-white/50 hover:bg-white/80'
-                        }`}
+                        className={`h-2.5 rounded-full transition-all duration-300 ${index === currentImageIndex
+                          ? 'w-8 bg-accent'
+                          : 'w-2.5 bg-white/50 hover:bg-white/80'
+                          }`}
                         aria-label={`Go to slide ${index + 1}`}
                       />
                     ))}

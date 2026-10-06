@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, CheckCircle, Users, Zap, Award } from 'lucide-react'
 import { Metadata } from 'next'
+import Certification from '../certification/page'
 
 export const metadata: Metadata = {
   title: 'About Joric Builders | Construction Company Kenya',
@@ -26,6 +27,8 @@ export default function About() {
             </p>
           </div>
         </section>
+
+
 
         {/* Story Section */}
         <section className="py-20 bg-white">
@@ -56,6 +59,9 @@ export default function About() {
             </div>
           </div>
         </section>
+
+        <Certification />
+
 
         {/* Mission, Vision, Values */}
         <section className="py-20 bg-gray-50">

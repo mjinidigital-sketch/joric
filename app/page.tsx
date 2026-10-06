@@ -6,6 +6,7 @@ import { ArrowRight, CheckCircle, Hammer, Building2, Palette, Zap } from 'lucide
 import Hero from '@/components/Hero'
 import Services from '@/components/Services'
 import WhyChooseUs from '@/components/WhyChooseUs'
+import Certification from '@/components/Certification'
 
 export default function Home() {
   return (
@@ -14,13 +15,17 @@ export default function Home() {
 
       <main className="flex-grow">
         {/* Hero Section */}
-     <Hero />
+        <Hero />
 
-     {/* Services Preview */}
-     <Services limit={15} />
+        {/* Certification Section */}
+
+
+        {/* Services Preview */}
+        <Services limit={15} />
+        <Certification />
 
         {/* Why Choose Us */}
-      <WhyChooseUs />
+        <WhyChooseUs />
 
         {/* CTA Section */}
         <section className="py-20 bg-accent text-white">
@@ -46,6 +51,7 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <Certification />
 
       <Footer />
     </div>
