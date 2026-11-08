@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { ArrowRight, CheckCircle, Hammer, Building2, Zap, Palette, Wrench, HomeIcon } from 'lucide-react'
 import { Metadata } from 'next'
 import ServicesGrid from '@/components/Services'
+import Certification from '@/components/Certification'
 
 export const metadata: Metadata = {
   title: 'Services - Joric Builders | Construction & Design Solutions Kenya',
@@ -82,6 +83,7 @@ export default function Services() {
             </div>
           </div>
         </section>
+         <Certification />
 
         {/* Why Us */}
         <section className="py-20 bg-gray-50">
