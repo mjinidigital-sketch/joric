@@ -4,6 +4,8 @@ import Navigation from '@/components/navigation'
 import Footer from '@/components/footer'
 import { Mail, MapPin, Phone, Clock, Send } from 'lucide-react'
 import { useState } from 'react'
+import Script from 'next/script'
+import { event } from '@/lib/gtag'
 
 
 export default function Contact() {
@@ -27,6 +29,9 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    // Trigger Google Ads conversion event
+    event('ads_conversion_Contact_Us_1', {})
+
     // In a real application, you would send this data to a backend service
     console.log('Form submitted:', formData)
     // Prepare WhatsApp message
@@ -50,6 +55,14 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      {/* Google tag (gtag.js) event */}
+      <Script id="google-tag-contact-us" strategy="afterInteractive">
+        {`
+          gtag('event', 'ads_conversion_Contact_Us_1', {
+            // <event_parameters>
+          });
+        `}
+      </Script>
       <Navigation />
 
       <main className="flex-grow">

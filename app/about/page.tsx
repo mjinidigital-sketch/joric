@@ -2,6 +2,7 @@ import Navigation from '@/components/navigation'
 import Footer from '@/components/footer'
 import Link from 'next/link'
 import Image from 'next/image'
+import Script from 'next/script'
 import { ArrowRight, CheckCircle, Users, Zap, Award } from 'lucide-react'
 import { Metadata } from 'next'
 import Certification from '../certification/page'
@@ -15,6 +16,14 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <div className="min-h-screen flex flex-col">
+      {/* Google tag (gtag.js) event */}
+      <Script id="google-tag-about-us" strategy="afterInteractive">
+        {`
+          gtag('event', 'ads_conversion_About_Us_1', {
+            // <event_parameters>
+          });
+        `}
+      </Script>
       <Navigation />
 
       <main className="flex-grow">
